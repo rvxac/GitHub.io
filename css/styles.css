@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+#hero {
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Enables parallax */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Adjust text color for visibility */
+}
+
 /* Body styling */
 body {
   font-family: 'Open Sans', sans-serif;
