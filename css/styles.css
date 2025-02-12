@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLoyd Recording</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
 #hero {
   background-image: url('../images/hero-background.jpg');
   background-size: cover;
