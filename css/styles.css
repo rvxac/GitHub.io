@@ -7,6 +7,21 @@
   box-sizing: border-box;
 }
 
+#hero {
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center top; /* Crop and adjust positioning if necessary */
+  background-attachment: fixed; /* Enables parallax */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Adjust text color for visibility */
+  position: relative; /* For absolute positioning of Spotify player */
+  transform: rotate(0deg); /* Reset any previous rotation */
+}
+
 /* Body styling */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -17,8 +32,8 @@ body {
 /* Header styling */
 header {
   background: #fff;
-  padding: 20px 40px;  /* Increased padding for better spacing */
-  border-bottom: 2px solid #ddd;  /* Lighter border for a softer look */
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
   position: fixed;
   top: 0;
   width: 100%;
@@ -26,34 +41,28 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
 
-/* Brand name styling */
-header .brand {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  color: #333;
-  text-decoration: none;
-  padding: 0 20px;  /* Spacing around brand */
+/* Floating Spotify player styling */
+#spotify-player {
+  position: absolute;  /* Position it relative to the parent #hero section */
+  right: 20px;  /* Adjust this value to move it closer or further from the right edge */
+  top: 50%;  /* Vertically center it relative to the #hero */
+  transform: translateY(-50%);  /* Fine-tune vertical alignment */
+  z-index: 10;  /* Ensure it floats on top of other content */
+  width: 300px;  /* Set a fixed width for the Spotify player */
 }
 
 /* Navigation styling */
-header nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 header nav ul {
   list-style: none;
   display: flex;
-  margin-left: auto;  /* Push the menu to the right */
-  gap: 20px;  /* Even space between items */
+  justify-content: center;
 }
 
 header nav ul li {
-  margin: 0;
+  margin: 0 15px;
 }
 
 header nav ul li a {
@@ -61,71 +70,30 @@ header nav ul li a {
   color: #333;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
   padding: 5px 10px;
-  transition: color 0.3s, transform 0.3s;  /* Smooth transition */
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
-  color: #007BFF;  /* Accent color for hover effect */
-  transform: scale(1.1);  /* Slight zoom effect */
-}
-
-/* Mobile menu (hamburger) */
-header nav .burger {
-  display: none;  /* Hidden by default */
-  cursor: pointer;
-  font-size: 30px;
-  color: #333;
-}
-
-header nav input:checked ~ ul {
-  display: flex;  /* Show menu when hamburger is clicked */
-}
-
-@media (max-width: 768px) {
-  header nav ul {
-    display: none;  /* Hide menu by default on mobile */
-    flex-direction: column;
-    gap: 15px;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  header nav ul li a {
-    font-size: 22px;  /* Larger font for better readability on mobile */
-    padding: 10px;
-  }
-
-  header nav input:checked ~ ul {
-    display: flex;  /* Show menu when hamburger is clicked */
-  }
-
-  /* Hamburger (toggle) visibility on mobile */
-  header nav .burger {
-    display: block;  /* Show hamburger on small screens */
-  }
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: #007BFF; /* Change to your preferred accent color */
 }
 
 /* Parallax section styling */
-#hero {
-  background-image: url('../images/hero-background.jpg');
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;  /* Enables parallax */
-  height: 100vh;  /* Full screen height */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;  /* Adjust text color for visibility */
+  min-height: 500px;
 }
 
 /* Overlay for parallax sections to enhance text readability */
 .parallax .overlay {
-  background: rgba(0, 0, 0, 0.4);  /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
   padding: 20px;
   text-align: center;
   color: #fff;
@@ -133,7 +101,7 @@ header nav input:checked ~ ul {
 
 /* Main content styling */
 main {
-  margin-top: 80px;  /* Space for fixed header */
+  margin-top: 80px; /* Space for fixed header */
   padding: 20px;
 }
 
@@ -231,22 +199,29 @@ footer {
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
-    display: none;  /* Hide the navigation */
+    display: none; /* Hide the navigation */
   }
 
-  header nav input:checked ~ ul {
-    display: flex;  /* Show menu when checked */
+  .album {
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Mobile hamburger menu */
-  header nav .burger {
-    display: block;
-    font-size: 30px;
-    color: #333;
+  .album img {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
-  header nav ul li a {
-    font-size: 22px;
-    padding: 10px;
+  /* Adjust floating Spotify player on smaller screens */
+  #spotify-player {
+    width: 250px;  /* Make it slightly smaller for mobile */
   }
 }
+
+/* Custom Notes:
+  - The Spotify player is positioned in front of the background image in the header.
+  - Parallax effect is maintained with the fixed background in the #hero section.
+  - To update a parallax background image for a section, change the URL in that section’s CSS.
+  - To update gallery images, replace the images in the /images folder with your own files.
+  - The fonts are set via Google Fonts to mimic the sleek, professional look you liked.
+*/
