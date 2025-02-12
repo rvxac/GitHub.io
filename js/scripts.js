@@ -15,4 +15,13 @@ document.querySelectorAll('header nav a').forEach(anchor => {
   });
 });
 
+// Hamburger menu toggle
+const burger = document.getElementById('burger-menu');
+const menu = document.getElementById('menu');
+
+// Add event listener for the hamburger button
+burger.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle the 'show' class on the menu
+});
+
 // Future JavaScript functionality can be added here.
