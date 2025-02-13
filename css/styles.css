@@ -89,13 +89,6 @@ nav {
   width: 300px;
 }
 
-/* Fix for album image sizing */
-.album img {
-  max-width: 200px; /* Adjust as needed */
-  height: auto;
-  display: block;
-}
-
 /* --- Parallax Section --- */
 .parallax {
   background-attachment: fixed;
@@ -130,6 +123,31 @@ main {
   padding: 40px 0;
 }
 
+/* --- Gallery Section --- */
+.gallery {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.gallery .content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* --- Footer --- */
 footer {
   text-align: center;
@@ -155,6 +173,10 @@ footer {
   #spotify-player {
     width: 250px;
     right: 10px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr; /* Change to 2 columns for smaller screens */
   }
 }
 
