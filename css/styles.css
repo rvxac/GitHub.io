@@ -125,38 +125,58 @@ main {
 
 /* --- Discography Section --- */
 .album {
-  display: flex; /* Make the album cover and text align side by side */
-  align-items: center; /* Center the content vertically */
-  margin-bottom: 20px; /* Space between albums */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
 }
 
 .album img {
-  max-width: 200px; /* Adjust album cover size */
-  height: auto;
+  max-width: 200px; /* Ensure the image doesn't exceed 200px */
+  width: 100%; /* Allow the image to shrink, but not grow beyond max-width */
+  height: auto; /* Maintain aspect ratio */
   display: block;
-  margin-right: 20px; /* Space between image and text */
+  margin-right: 20px; /* Space between the image and the text */
 }
 
 .album .details {
-  flex-grow: 1; /* Take up remaining space for text */
+  flex-grow: 1;
 }
 
 .album .title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 5px; /* Space between title and release date */
+  margin-bottom: 5px;
 }
 
 .album .release-date {
   font-size: 1rem;
-  color: #777; /* Light gray color for release date */
-  margin-bottom: 10px; /* Space between date and description */
+  color: #777;
+  margin-bottom: 10px;
 }
 
 .album .description {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
+}
+
+@media (max-width: 768px) {
+  .album {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album img {
+    margin-bottom: 15px;
+    max-width: 150px; /* Make the image smaller on mobile */
+  }
+
+  .album .details {
+    text-align: center;
+  }
 }
 
 /* Example of a media query to adjust layout on smaller screens */
