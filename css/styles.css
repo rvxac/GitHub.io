@@ -89,6 +89,13 @@ nav {
   width: 300px;
 }
 
+/* Fix for album image sizing */
+.album img {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+}
+
 /* --- Parallax Section --- */
 .parallax {
   background-attachment: fixed;
