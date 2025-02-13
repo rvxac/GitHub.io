@@ -7,13 +7,20 @@
   box-sizing: border-box;
 }
 
-/* Hero Section */
+/* Body styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --- Hero Section (Parallax) --- */
 #hero {
   background-image: url('../images/hero-background.jpg');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed; /* Enables parallax */
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,40 +29,39 @@
   position: relative; /* Allows absolute positioning for Spotify player */
 }
 
-/* Body styling */
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
 /* --- Header Navigation --- */
 header {
   background: rgba(255, 255, 255, 0.9); /* Slight transparency */
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for sleek look */
 }
 
+/* Navigation Styling */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 80%;
   max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  width: 100%;
 }
 
 /* Navigation Menu */
 .menu {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.menu li {
+  flex-grow: 1; /* Evenly distributes space */
+  text-align: center;
 }
 
 .menu a {
@@ -63,21 +69,23 @@ nav {
   color: #333;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
   padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a.active {
   color: #007BFF; /* Accent color */
 }
 
 /* --- Floating Spotify Player --- */
 #spotify-player {
-  position: absolute; /* Position it relative to #hero */
-  right: 20px; /* Adjust for placement */
-  top: 50%; /* Vertically centered */
+  position: absolute;
+  right: 20px;
+  top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* Ensure it floats over content */
+  z-index: 10;
   width: 300px;
 }
 
@@ -102,13 +110,12 @@ nav {
   color: #fff;
 }
 
-/* Main Content */
+/* --- Main Content --- */
 main {
   margin-top: 80px; /* Space for fixed header */
   padding: 20px;
 }
 
-/* Content Sections */
 .content {
   max-width: 800px;
   margin: 0 auto;
@@ -116,7 +123,7 @@ main {
   padding: 40px 0;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
   text-align: center;
   padding: 20px;
@@ -139,11 +146,10 @@ footer {
 
   /* Adjust floating Spotify player on smaller screens */
   #spotify-player {
-    width: 250px; /* Make it slightly smaller for mobile */
+    width: 250px;
     right: 10px;
   }
 }
-
 
 /* Custom Notes:
   - The Spotify player is positioned in front of the background image in the header.
