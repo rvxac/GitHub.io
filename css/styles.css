@@ -180,6 +180,24 @@ main {
   }
 }
 
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .album {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    align-items: center; /* Center the items */
+    text-align: center; /* Center the text */
+  }
+
+  .album img {
+    margin-bottom: 15px; /* Space between image and text when stacked */
+    max-width: 150px; /* Smaller image size on mobile */
+  }
+
+  .album .details {
+    text-align: center; /* Ensure text is centered */
+  }
+}
+
 /* Example of a media query to adjust layout on smaller screens */
 @media (max-width: 768px) {
   .album {
