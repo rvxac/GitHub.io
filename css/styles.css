@@ -126,8 +126,8 @@ main {
 /* --- Discography Section --- */
 .album {
   display: flex;
-  align-items: center; /* Ensures vertical alignment */
-  justify-content: flex-start; /* Ensures left alignment */
+  align-items: center; /* Aligns image and text vertically */
+  justify-content: flex-start; /* Aligns everything to the left */
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
@@ -138,15 +138,16 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  margin-right: 20px;
+  margin-right: 20px; /* Space between image and text */
 }
 
-.album .details {
+.album-info {  /* Updated class name for consistency */
   flex-grow: 1;
-  text-align: left;
+  text-align: left; /* Ensures text aligns left */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Ensures the text is vertically centered */
+  justify-content: center; /* Centers the text vertically */
+  align-items: flex-start; /* Ensures text stays left-aligned */
 }
 
 /* --- Footer --- */
