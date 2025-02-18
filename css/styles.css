@@ -33,21 +33,37 @@ body {
 /* Hero Title Styling */
 #hero h1 {
   font-family: 'Poppins', sans-serif; /* Use Poppins or another modern font */
-  font-size: 6rem; /* Make the title larger */
+  font-size: 4.5rem; /* Adjusted to make it a bit smaller */
   font-weight: 700; /* Bold the font */
   color: #fff; /* White color for contrast */
-  text-transform: uppercase; /* Make the text uppercase for emphasis */
-  letter-spacing: 5px; /* Add space between letters */
+  text-transform: none; /* No uppercase transformation */
+  letter-spacing: 2px; /* Slight letter-spacing for clean effect */
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow to make it stand out */
   margin: 0;
   padding: 0 20px; /* Add padding for spacing */
   max-width: 90%; /* Limit width for large screens */
 }
 
+/* Hero Subtitle Styling */
+#hero .subtitle {
+  font-family: 'Open Sans', sans-serif; /* Different font for subtitle */
+  font-size: 2rem; /* Make subtitle smaller */
+  font-weight: 400; /* Lighter weight for contrast */
+  color: #fff; /* White for the subtitle */
+  margin-top: 20px; /* Add space between the title and subtitle */
+  text-transform: none; /* No uppercase transformation */
+  letter-spacing: 1px; /* Slight letter-spacing for clarity */
+  max-width: 80%; /* Limit width for large screens */
+}
+
 /* Optional: Make the title responsive */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 4rem; /* Adjust font size on smaller screens */
+    font-size: 3.5rem; /* Adjust font size on smaller screens */
+  }
+
+  #hero .subtitle {
+    font-size: 1.5rem; /* Smaller subtitle on mobile */
   }
 }
 
