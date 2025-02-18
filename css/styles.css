@@ -15,6 +15,7 @@ body {
 }
 
 /* --- Hero Section (Parallax) --- */
+/* --- Hero Section (Parallax) --- */
 #hero {
   background-image: url('../images/hero-background.jpg');
   background-size: cover;
@@ -27,6 +28,27 @@ body {
   text-align: center;
   color: white;
   position: relative; /* Allows absolute positioning for Spotify player */
+}
+
+/* Hero Title Styling */
+#hero h1 {
+  font-family: 'Poppins', sans-serif; /* Use Poppins or another modern font */
+  font-size: 6rem; /* Make the title larger */
+  font-weight: 700; /* Bold the font */
+  color: #fff; /* White color for contrast */
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  letter-spacing: 5px; /* Add space between letters */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow to make it stand out */
+  margin: 0;
+  padding: 0 20px; /* Add padding for spacing */
+  max-width: 90%; /* Limit width for large screens */
+}
+
+/* Optional: Make the title responsive */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 4rem; /* Adjust font size on smaller screens */
+  }
 }
 
 /* --- Header Navigation --- */
