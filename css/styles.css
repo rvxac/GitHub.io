@@ -126,59 +126,27 @@ main {
 /* --- Discography Section --- */
 .album {
   display: flex;
-  align-items: center;
-  gap: 20px; /* Improved spacing */
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: flex-start; /* Ensures left alignment */
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
 
 .album img {
-  max-width: 200px; /* Ensure the image doesn't exceed 200px */
-  width: 100%; /* Allow the image to shrink, but not grow beyond max-width */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 200px;
+  width: 100%;
+  height: auto;
   display: block;
+  margin-right: 20px;
 }
 
 .album .details {
-  flex: 1; /* Ensures text takes up remaining space */
-  text-align: left; /* Align text to the left of the image */
-}
-
-.album .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.album .release-date {
-  font-size: 1rem;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-.album .description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .album {
-    flex-direction: column; /* Stack the image and text vertically on smaller screens */
-    align-items: center; /* Center the items */
-    text-align: center; /* Center the text */
-  }
-
-  .album img {
-    margin-bottom: 15px; /* Space between image and text when stacked */
-    max-width: 150px; /* Smaller image size on mobile */
-  }
-
-  .album .details {
-    text-align: center; /* Ensure text is centered */
-  }
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensures the text is vertically centered */
 }
 
 /* --- Footer --- */
