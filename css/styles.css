@@ -15,67 +15,65 @@ body {
 }
 
 /* --- Hero Section (Parallax) --- */
-/* --- Hero Section (Parallax) --- */
 #hero {
   background-image: url('../images/hero-background.jpg');
   background-size: cover;
   background-position: center top;
-  background-attachment: fixed; /* Enables parallax */
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  position: relative; /* Allows absolute positioning for Spotify player */
+  position: relative;
 }
 
 /* Hero Title Styling */
 #hero h1 {
-  font-family: 'Poppins', sans-serif; /* Use Poppins or another modern font */
-  font-size: 4.5rem; /* Adjusted to make it a bit smaller */
-  font-weight: 700; /* Bold the font */
-  color: #fff; /* White color for contrast */
-  text-transform: none; /* No uppercase transformation */
-  letter-spacing: 2px; /* Slight letter-spacing for clean effect */
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow to make it stand out */
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
-  padding: 0 20px; /* Add padding for spacing */
-  max-width: 90%; /* Limit width for large screens */
+  padding: 0 20px;
+  max-width: 90%;
 }
 
 /* Hero Subtitle Styling */
 #hero .subtitle {
-  font-family: 'Open Sans', sans-serif; /* Different font for subtitle */
-  font-size: 2rem; /* Make subtitle smaller */
-  font-weight: 400; /* Lighter weight for contrast */
-  color: #fff; /* White for the subtitle */
-  margin-top: 20px; /* Add space between the title and subtitle */
-  text-transform: none; /* No uppercase transformation */
-  letter-spacing: 1px; /* Slight letter-spacing for clarity */
-  max-width: 80%; /* Limit width for large screens */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 20px;
+  text-transform: none;
+  letter-spacing: 1px;
+  max-width: 80%;
 }
 
-/* Optional: Make the title responsive */
+/* Responsive Hero Adjustments */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 3.5rem; /* Adjust font size on smaller screens */
+    font-size: 3.5rem;
   }
-
   #hero .subtitle {
-    font-size: 1.5rem; /* Smaller subtitle on mobile */
+    font-size: 1.5rem;
   }
 }
 
 /* --- Header Navigation --- */
 header {
-  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  background: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for sleek look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Styling */
@@ -98,7 +96,7 @@ nav {
 }
 
 .menu li {
-  flex-grow: 1; /* Evenly distributes space */
+  flex-grow: 1;
   text-align: center;
 }
 
@@ -114,7 +112,7 @@ nav {
 
 .menu a:hover,
 .menu a.active {
-  color: #007BFF; /* Accent color */
+  color: #007BFF;
 }
 
 /* --- Floating Spotify Player --- */
@@ -127,30 +125,30 @@ nav {
   width: 300px;
 }
 
-/* --- Parallax Section --- */
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+/* --- Page Banner (Smaller Cover Photo) --- */
+.page-banner {
+  background-image: url('../images/default-banner.jpg'); /* Change per page */
   background-size: cover;
-  position: relative;
+  background-position: center;
+  height: 250px; /* Smaller height for a cleaner look */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-/* Overlay for readability */
-.parallax .overlay {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  text-align: center;
-  color: #fff;
+/* Page Title Styling */
+.page-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Main Content --- */
 main {
-  margin-top: 80px; /* Space for fixed header */
+  margin-top: 80px;
   padding: 20px;
 }
 
@@ -164,8 +162,8 @@ main {
 /* --- Discography Section --- */
 .album {
   display: flex;
-  align-items: center; /* Aligns image and text vertically */
-  justify-content: flex-start; /* Aligns everything to the left */
+  align-items: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
@@ -176,16 +174,16 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  margin-right: 20px; /* Space between image and text */
+  margin-right: 20px;
 }
 
-.album-info {  /* Updated class name for consistency */
+.album-info {
   flex-grow: 1;
-  text-align: left; /* Ensures text aligns left */
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers the text vertically */
-  align-items: flex-start; /* Ensures text stays left-aligned */
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* --- Footer --- */
@@ -209,21 +207,19 @@ footer {
     align-items: center;
   }
 
-  /* Adjust floating Spotify player on smaller screens */
   #spotify-player {
     width: 250px;
     right: 10px;
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr 1fr; /* Change to 2 columns for smaller screens */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /* Custom Notes:
-  - The Spotify player is positioned in front of the background image in the header.
-  - Parallax effect is maintained with the fixed background in the #hero section.
-  - To update a parallax background image for a section, change the URL in that section’s CSS.
-  - To update gallery images, replace the images in the /images folder with your own files.
-  - The fonts are set via Google Fonts to mimic the sleek, professional look you liked.
+  - Page banners now use a `.page-banner` class instead of oversized sections.
+  - The grey box behind titles has been removed.
+  - Adjust `.page-banner` height for different pages as needed.
+  - Update images per page using different `.page-banner` styles.
 */
