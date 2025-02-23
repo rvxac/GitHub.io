@@ -13,7 +13,7 @@ document.querySelectorAll('header nav a').forEach(anchor => {
   });
 });
 
-// Lightbox Functionality
+// Lightbox Functionality (Fix for images appearing at bottom)
 document.addEventListener("DOMContentLoaded", function () {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -21,8 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".lightbox-trigger").forEach(img => {
         img.addEventListener("click", function () {
-            lightbox.style.display = "flex";
-            lightboxImg.src = this.getAttribute("data-src"); // Load larger image
+            lightbox.style.display = "flex"; // Ensures Lightbox appears centered
+            lightbox.style.justifyContent = "center"; // Centers horizontally
+            lightbox.style.alignItems = "center"; // Centers vertically
+            lightbox.style.position = "fixed"; // Ensures it appears over content
+            lightboxImg.src = this.getAttribute("data-src") || this.src; // Load larger image
         });
     });
 
@@ -32,11 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close when clicking outside the image
     lightbox.addEventListener("click", function (e) {
-        if (e.target !== lightboxImg) {
+        if (!lightboxImg.contains(e.target)) { // Ensures clicking outside closes it
             lightbox.style.display = "none";
         }
     });
 });
+
 
 // Mobile Hamburger Menu Functionality
 document.addEventListener("DOMContentLoaded", function () {
