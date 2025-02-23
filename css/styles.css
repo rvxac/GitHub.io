@@ -204,10 +204,28 @@ nav {
   margin: 0 auto;
 }
 
-/* --- Fix 'Our Music' Alignment and Size --- */
+/* --- Fix Gallery Image Sizes and Alignment --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
 .content h2 {
   text-align: center;
-  font-size: 1.5rem; /* Reduced size for additional text */
+  font-size: 1.5rem;
   margin-bottom: 10px;
   max-width: 800px;
   margin-left: auto;
@@ -219,9 +237,7 @@ nav {
   - Sticky header now shrinks on scroll.
   - Mobile navigation now has a hamburger menu.
   - Hamburger menu is hidden on desktop.
-  - Album covers are properly spaced on mobile.
-  - Desktop album layout is properly aligned.
-  - Page titles are fully visible below the navbar.
-  - 'Our Music' is centered and resized for additional text.
+  - Gallery images are properly sized and centered.
+  - 'Our Work in Pictures' is centered correctly.
   - No unintended changes to desktop or mobile.
 */
