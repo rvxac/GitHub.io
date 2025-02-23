@@ -171,10 +171,10 @@ main {
 
 .album img {
   max-width: 200px; /* Prevents album covers from getting too big */
-  width: auto; /* Ensures they don’t stretch */
-  height: auto; /* Maintains aspect ratio */
+  width: auto;
+  height: auto;
   display: block;
-  margin-right: 20px; /* Space between image and text */
+  margin-right: 20px;
 }
 
 .album-info {
@@ -186,9 +186,27 @@ main {
   align-items: flex-start;
 }
 
+/* --- Photo Gallery Grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+
 @media (max-width: 768px) {
-  .album img {
-    max-width: 150px; /* Slightly smaller on mobile */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
@@ -216,7 +234,7 @@ main {
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
-} 
+}
 
 /* Custom Notes:
   - Page banners now use a `.page-banner` class instead of oversized sections.
