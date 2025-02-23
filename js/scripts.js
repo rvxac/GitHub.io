@@ -38,4 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Mobile Hamburger Menu Functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll(".menu a").forEach(link => {
+            link.addEventListener("click", function () {
+                menu.classList.remove("active");
+            });
+        });
+    }
+});
+
 // Future JavaScript functionality can be added here.
