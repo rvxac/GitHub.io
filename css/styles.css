@@ -180,9 +180,22 @@ nav {
 }
 
 .lightbox img {
-  max-width: 90%;
-  max-height: 80%;
+  max-width: 80vw; /* Prevents images from being too wide */
+  max-height: 80vh; /* Prevents images from being too tall */
+  height: auto;
+  width: auto;
   border-radius: 5px;
+}
+
+/* Ensure Gallery Images Stay Properly Sized */
+.gallery-grid img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  max-width: 400px;
+  display: block;
+  margin: auto;
 }
 
 .lightbox-close {
@@ -198,5 +211,5 @@ nav {
   - Sticky header now shrinks on scroll.
   - Album layout properly adjusts for mobile to prevent squishing.
   - Lightbox and gallery grid styles remain intact.
-  - All previous CSS structure is retained.
+  - Lightbox images and gallery images have separate constraints to prevent layout issues.
 */
