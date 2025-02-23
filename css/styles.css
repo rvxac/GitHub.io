@@ -176,7 +176,7 @@ nav {
   justify-content: center;
   text-align: center;
   height: 250px;
-  padding-top: 120px; /* Ensures enough space below navbar */
+  padding-top: 120px;
 }
 
 /* Ensures Title is Fully Visible */
@@ -186,6 +186,18 @@ nav {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
+  margin: 0 auto;
+}
+
+/* --- Fix 'Our Music' Alignment and Size --- */
+.content h2 {
+  text-align: center;
+  font-size: 1.5rem; /* Reduced size for additional text */
+  margin-bottom: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
 }
 
 /* Custom Notes:
@@ -194,5 +206,6 @@ nav {
   - Album covers are properly spaced on mobile.
   - Desktop album layout is properly aligned.
   - Page titles are fully visible below the navbar.
+  - 'Our Music' is centered and resized for additional text.
   - No unintended changes to desktop or mobile.
 */
