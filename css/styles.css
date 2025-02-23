@@ -103,14 +103,15 @@ nav {
   background-image: url('../images/default-banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 250px; /* Adjust if needed */
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   position: relative;
-  padding-top: 80px; /* Pushes text down so it isn't hidden behind nav */
+  margin-top: 100px; /* Ensures title is not hidden by nav */
+  padding-top: 20px;
 }
 
 .page-banner h1 {
