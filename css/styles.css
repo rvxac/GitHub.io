@@ -103,7 +103,7 @@ nav {
   header {
     padding: 10px 0;
     text-align: center;
-    overflow: hidden; /* Prevents nav from breaking out of the screen */
+    overflow: hidden;
   }
 
   nav {
@@ -143,9 +143,31 @@ nav {
   }
 }
 
+/* --- Desktop Album Layout Fix --- */
+@media (min-width: 769px) {
+  .album {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+  }
+
+  .album img {
+    max-width: 250px;
+    margin-right: 20px;
+  }
+
+  .album-info {
+    text-align: left;
+  }
+}
+
 /* Custom Notes:
   - Sticky header now shrinks on scroll.
   - Mobile navigation is now fully visible.
   - Album covers are properly spaced on mobile.
-  - No unintended desktop changes.
+  - Desktop album layout is properly aligned.
+  - No unintended changes to desktop or mobile.
 */
