@@ -127,8 +127,33 @@ nav {
   cursor: pointer;
 }
 
+/* --- Fix Image Sizes on Site --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Fix Album Image Sizes --- */
+.album img {
+  max-width: 200px; /* Prevents album covers from getting too large */
+  width: auto;
+  height: auto;
+  display: block;
+  margin-right: 20px;
+}
+
+/* --- Fix Gallery Image Sizes --- */
+.gallery-grid img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
 /* Custom Notes:
   - Lightbox fix ensures images appear in center instead of bottom.
-  - Lightbox overlay remains fully functional.
+  - Fixed image sizes for gallery and albums.
   - No unintended changes to desktop or mobile.
 */
