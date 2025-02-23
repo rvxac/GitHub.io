@@ -132,6 +132,12 @@ nav {
   }
 }
 
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger menu on desktop */
+  }
+}
+
 /* --- Mobile Album Cover Fix --- */
 @media (max-width: 768px) {
   .album {
@@ -212,6 +218,7 @@ nav {
 /* Custom Notes:
   - Sticky header now shrinks on scroll.
   - Mobile navigation now has a hamburger menu.
+  - Hamburger menu is hidden on desktop.
   - Album covers are properly spaced on mobile.
   - Desktop album layout is properly aligned.
   - Page titles are fully visible below the navbar.
