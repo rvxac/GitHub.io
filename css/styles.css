@@ -56,7 +56,7 @@ header {
 }
 
 .scrolled header {
-  padding: 5px 0; /* Shrinks header when scrolling */
+  padding: 5px 0;
 }
 
 /* Navigation Styling */
@@ -69,7 +69,6 @@ nav {
   margin: 0 auto;
 }
 
-/* Navigation Menu */
 .menu {
   list-style: none;
   display: flex;
@@ -127,22 +126,46 @@ nav {
   cursor: pointer;
 }
 
-/* --- Fix Image Sizes on Site --- */
-img {
-  max-width: 100%;
-  height: auto;
+/* --- Restore Album Layout and Gallery Grid --- */
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* --- Fix Album Image Sizes --- */
 .album img {
-  max-width: 200px; /* Prevents album covers from getting too large */
+  max-width: 200px;
   width: auto;
   height: auto;
   display: block;
   margin-right: 20px;
 }
 
-/* --- Fix Gallery Image Sizes --- */
+.album-info {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gallery-grid img {
   max-width: 400px;
   width: 100%;
@@ -152,8 +175,33 @@ img {
   border-radius: 5px;
 }
 
+/* --- Fix Page Titles Being Hidden Behind Navbar --- */
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 250px;
+  padding-top: 120px;
+}
+
+.parallax .overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
 /* Custom Notes:
   - Lightbox fix ensures images appear in center instead of bottom.
-  - Fixed image sizes for gallery and albums.
+  - Restored album and gallery layouts.
+  - Fixed page title positioning under navbar.
   - No unintended changes to desktop or mobile.
 */
