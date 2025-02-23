@@ -159,13 +159,31 @@ main {
   padding: 40px 0;
 }
 
-/* --- Album Image Styling --- */
+/* --- Album Layout Styling --- */
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
 .album img {
   max-width: 200px; /* Prevents album covers from getting too big */
   width: auto; /* Ensures they don’t stretch */
   height: auto; /* Maintains aspect ratio */
   display: block;
-  margin: 0 auto;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.album-info {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 @media (max-width: 768px) {
