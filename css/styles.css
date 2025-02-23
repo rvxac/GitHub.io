@@ -98,6 +98,28 @@ nav {
   color: #007BFF;
 }
 
+/* --- Page Banner Fix (Ensures Title is Visible and Centered) --- */
+.page-banner {
+  background-image: url('../images/default-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px; /* Adjust if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-top: 80px; /* Pushes text down so it isn't hidden behind nav */
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 /* --- Album Layout Styling (Fix for Center Alignment) --- */
 .album {
   display: flex;
@@ -182,6 +204,7 @@ nav {
 
 /* Custom Notes:
   - Sticky header now shrinks on scroll.
+  - Page banners now ensure titles are visible and centered.
   - Album layout properly centers on desktop.
   - Gallery grid properly aligns to the left.
   - Lightbox and other styles remain intact.
