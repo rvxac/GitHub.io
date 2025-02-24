@@ -33,3 +33,16 @@
   padding: 0 20px;
   max-width: 90%;
 }
+
+/* Restrict the Logo Size */
+.contact-logo {
+  max-width: 500px; /* Adjust as needed */
+  height: auto; /* Keep aspect ratio */
+}
+
+
+/* Constrain Album Covers */
+.album-cover {
+  max-width: 400px; /* Adjust to desired size */
+  height: auto;
+}
