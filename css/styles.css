@@ -15,6 +15,11 @@
   position: relative;
 }
 
+/* Contact Page Hero Background */
+.contact-page #hero {
+  background-image: url('../images/hero-contact.jpg'); /* Unique background for Contact Page */
+}
+
 /* Hero Title Styling */
 #hero h1 {
   font-family: 'Poppins', sans-serif;

@@ -3,187 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LLoyd Recording - Discography</title>
+  <title>LLoyd Recording</title>
   <link href="./css/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- Google Fonts: Montserrat for headings, Open Sans for body text -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-<header>
-    <nav class="flex two">
-        <a href="index.html" class="brand">LLoyd Recording</a>
-        
-        <!-- Mobile Menu Button (Hamburger Icon) -->
-        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-        
-        <!-- Navigation Menu -->
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="discography.html">Discography</a>
-            <a href="photos.html">Photos</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
+
+  <!-- NAVIGATION BAR-->
+  <header>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./images/LLoydRecording.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LLoyd Recording</span>
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="./index.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./discography.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              Discography
+            </a>
+          </li>
+          <li>
+            <a href="./photos.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      </div>
     </nav>
-</header>
+  </header>
+  
 
 
-  <!-- Discography Hero Section -->
-  <section class="parallax" id="discography-hero">
-    <div class="overlay">
-      <h1>Discography</h1>
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+  
+    <!-- Single Album Entry -->
+    <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-200 rounded-lg shadow-sm w-[90%] max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      
+      <!-- Album Cover -->
+      <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0 overflow-hidden rounded-lg">
+        <img class="w-full h-full object-cover" 
+             src="images/catchuptome.jpg" 
+             alt="Album Cover">
+      </div>
+  
+      <!-- Album Info -->
+      <div class="flex flex-col justify-center md:justify-start p-4 w-full text-center md:text-left">
+        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Artist Name - Song Title
+          </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Release Date: Month Year</p>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Credits: Credit1, Credit2, Credit3</p>
+          
+          <!-- Streaming Links -->
+          <div class="mt-2 space-y-1">
+            <a href="https://spotify.com" target="_blank" class="text-blue-600 hover:underline">Stream on Spotify</a>
+            <a href="https://music.apple.com" target="_blank" class="text-blue-600 hover:underline">Stream on Apple Music</a>
+          </div>
+      </div>
     </div>
-  </section>
+  
+    <!-- Separator Line -->
+    <div class="border-t border-gray-300"></div>
+  
+    <!-- Duplicate this block for additional albums -->
+    
+  </div>
+  
+  
+  
 
-  <!-- Main Content -->
-  <main>
-    <section class="content">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+  
+  <!-- Single Album Entry -->
+  <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-200 rounded-lg shadow-sm w-[90%] max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    
+    <!-- Album Cover -->
+    <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0 overflow-hidden rounded-lg">
+      <img class="w-full h-full object-cover" 
+           src="images/album-cover.jpg" 
+           alt="Album Cover">
+    </div>
 
-        <h2><a href="https://open.spotify.com/album/5geoPlJF4v0KxjSGZoQaN8?si=ATdldf5bRhCjKm-jLGDShg" target="_blank" rel="noopener noreferrer">Listen to LLoyd Recording on Spotify</a></h2>
-        <h2><a href="https://music.apple.com/ca/playlist/songs-ive-worked-on/pl.u-4JomaD3IaoD6bPN" target="_blank" rel="noopener noreferrer">Listen to LLoyd Recording on Apple Music</a></h2>
-      <p>
+    <!-- Album Info -->
+    <div class="flex flex-col justify-center md:justify-start p-4 w-full text-center md:text-left">
+        <h5 class="mb-1 text-base md:text-lg font-bold tracking-tight text-gray-900">
+            Artist Name - Song Title
+        </h5>
+        <p class="text-sm md:text-base text-gray-700">Release Date: Month Year</p>
+        <p class="text-sm md:text-base text-gray-700">Credits: Credit1, Credit2, Credit3</p>
         
-      </p>
-
- <!--AUZZO CATCH UP TO ME -->
-      <div class="album">
-        <img src="images/catchuptome.jpg" data-src="images/catchuptome.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Auzzo - catch up to me</h3>
-          <p>Release Date: January 2025</p>
-          <p>Credit: Mix Engineer</p>
-          <p><a href="https://open.spotify.com/album/5geoPlJF4v0KxjSGZoQaN8?si=ATdldf5bRhCjKm-jLGDShg" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/catch-up-to-me/1791457288?i=1791457289" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
+        <!-- Streaming Links -->
+        <div class="mt-2 space-y-1">
+          <a href="https://spotify.com" target="_blank" class="text-blue-600 hover:underline">🎵 Stream on Spotify</a>
+          <a href="https://music.apple.com" target="_blank" class="text-blue-600 hover:underline">🍏 Stream on Apple Music</a>
         </div>
-      </div>
-      <!-- Add more album items as needed -->
+    </div>
+  </div>
 
- <!--CURBSIDE PICKUP OFFTRACK -->
-      <div class="album">
-        <img src="images/offtrack.jpg" data-src="images/offtrack.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Curbside Pickup - OFFTRACK (Live)</h3>
-          <p>Release Date: September 2024</p>
-          <p>Credit: Production, Recording Engineer, Mix & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/5EF4fL8ZevOg0PQirlV7Rn?si=gH1tk7WHTb6lc3woY597MQ" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/offtrack-live-single/1769861295" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
+  <!-- Separator Line -->
+  <div class="border-t border-gray-300"></div>
 
-
-  <!--CURBSIDE PICKUP RUBRIC -->
-      <div class="album">
-        <img src="images/rubric.jpg" data-src="images/rubric.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Curbside Pickup - Rubric</h3>
-          <p>Release Date: August 2024</p>
-          <p>Credit: Production, Recording Engineer, Mixing & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/3bCUHZlAzb0itKEBLj3BOg?si=v9QZ6jxlT9K6FvbIRTRttw" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/rubric-single/1762524891" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-
-   <!--ECHOSIGHT TRAINWRECK -->
-      <div class="album">
-        <img src="images/trainwreck.jpg" data-src="images/trainwreck.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>ECHOSIGHT - TRAINWRECK</h3>
-          <p>Release Date: May 2024</p>
-          <p>Credit: Mixing & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/5undEgzCJAR2Y9ouPpquPk?si=6npVZ_q8R4qLs2vXH6t6dw" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/trainwreck-single/1747167622" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-
-
-  <!--GRANT BALL SOMETHING IN THE WATER -->
-      <div class="album">
-        <img src="images/somethinginthewater.jpg" data-src="images/somethinginthewater.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Grant Ball - SOMETHING IN THE WATER</h3>
-          <p>Release Date: April 2023</p>
-          <p>Credit: Production, Recording Engineer, Mixing & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/1UTI0rTEqFQphGz3Kfx2pH?si=srstyOPhQTCzXDAQYG98eA" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/something-in-the-water-feat-luke-berryman-single/1683117791" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-      
-  <!--GRANT BALL RECESS CHOPPED & SCREWED REMIX -->
-      <div class="album">
-        <img src="images/rechopped.jpg" data-src="images/rechopped.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Richard LLoyd - RECESS (Chopped & Screwed Remix)</h3>
-          <p>Release Date: August 2022</p>
-          <p>Credit: Artist, Beatmaking, Production, Mixing & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/7mxDlplLGFbA3dTLIdIoBu?si=X8ozf4RMSGKHech53VX3NQ" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/recess-feat-grant-ball-luke-berryman-chopped-screwed/1642379110" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-
-
-  <!--GRANT BALL VICTORIA RD. -->
-      <div class="album">
-        <img src="images/victoriard.jpg" data-src="images/victoriard.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Grant Ball - Victoria RD.</h3>
-          <p>Release Date: January 2021</p>
-          <p>Credit: Production, Recording Engineer, Mixing Engineer</p>
-          <p><a href="https://open.spotify.com/album/6Be38njb0q0TC3kExKDNB6?si=7IYCS2kJR-eOhT8eNc0e-A" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/victoria-rd-feat-kye-clayton-single/1544724690" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-      
-      
-      <!-- Example Album Item -->
-      <div class="album">
-        <img src="images/clarity.jpg" data-src="images/clarity.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Grant Ball - CLARITY</h3>
-          <p>Release Date: August 2021</p>
-          <p>Credit: Beatmaking, Production, Recording Engineer, Mixing Engineer</p>
-          <p><a href="https://open.spotify.com/album/5WHnwJcUyiBxoq8mLhq5sN?si=qWziKGyyQwujkipacPFaTw" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/clarity/1583075071" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-
- <!-- GRANT BALL 2001 -->
-      <div class="album">
-        <img src="images/2001.jpg" data-src="images/2001.jpg" alt="Album Cover" class="lightbox-trigger">
-        <div class="album-info">
-          <h3>Grant Ball - 2001</h3>
-          <p>Release Date: May 2020</p>
-          <p>Credit: Beatmaking, Production, Recording Engineer, Mixing & Mastering Engineer</p>
-          <p><a href="https://open.spotify.com/album/4qACXHFiSdImam4u8OWsYa?si=NorhBzMjTyq823Yh-GeHjg" target="_blank" rel="noopener noreferrer">Stream on Spotify</a></p>
-          <p><a href="https://music.apple.com/ca/album/2001-ep/1510943290" target="_blank" rel="noopener noreferrer">Stream on Apple Music</a></p>
-        </div>
-      </div>
-      <!-- Add more album items as needed -->
-
-    </section>
-  </main>
-
-<!-- Lightbox Container (Initially Hidden) -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img id="lightbox-img" src="" alt="">
+  <!-- Duplicate this block for additional albums -->
+  
 </div>
 
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 LLoyd Recording. All Rights Reserved.</p>
-  </footer>
 
-  <script src="js/scripts.js"></script>
+
+
+
+  
+  <div class="flex justify-center mt-8">
+    <a href="#" 
+       class="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow-sm w-[90%] max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      
+      <!-- Image Container with Fixed Size -->
+      <div class="w-32 h-32 md:w-48 md:h-48 flex-shrink-0 overflow-hidden">
+        <img class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-t-lg md:rounded-none md:rounded-s-lg" 
+             src="images/catchuptome.jpg" 
+             alt="Catch Up to Me">
+      </div>
+  
+      <!-- Content -->
+      <div class="flex flex-col justify-center p-4 leading-normal w-full md:w-2/3">
+          <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Catch Up to Me
+          </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Released: January 2025
+          </p>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Credit: Mix Engineer
+          </p>
+      </div>
+  
+    </a>
+  </div>
+  
+
+
+
+
+<footer class="bg-gray-900 text-white text-center py-4">
+  <p>&copy; 2025 LLoyd Recording. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
