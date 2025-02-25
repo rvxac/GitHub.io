@@ -13,7 +13,7 @@
 <body>
 
 
-  <body class="contact-page">
+  <body>
 
 
 
@@ -52,6 +52,34 @@
   </header>
   
 
+  <section id="hero" class="relative h-screen bg-[url('./images/hero-background.jpg')] bg-cover bg-center bg-fixed">
+    <!-- Dark overlay for contrast -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  
+    <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between h-full text-white px-8 md:px-16 lg:px-24">
+<!-- Hero Logo (Left) -->
+<div class="w-full md:w-1/2 flex justify-start">
+  <div class="flex-shrink-0 w-56 md:w-64 lg:w-80 xl:w-96 h-auto">
+    <img src="./images/LLoydRecording.png" class="object-contain w-full h-auto" alt="LLoyd Recording Logo">
+  </div>
+</div>
+
+  
+      <!-- Hero Text (Right) -->
+      <div class="w-full md:w-1/2 flex justify-end">
+        <div class="text-left w-full md:w-2/3 text-white">
+          <h1 class="text-3xl md:text-5xl font-bold mb-3">Get in Touch</h1>
+          <p class="text-lg md:text-2xl mb-2">Have a project in mind?</p>
+          <p class="text-base md:text-lg">Reach out and let's make it happen.</p>
+          <div class="mt-4">
+            <p class="text-sm md:text-base font-medium">Email: <a href="mailto:contact@lloydrecording.com" class="text-blue-400 hover:underline">prodrichardlloyd@gmail.com</a></p>
+            <p class="text-sm md:text-base font-medium">Instagram DM: <a href="tel:+1234567890" class="text-blue-400 hover:underline">@richardvxa</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- Hero Section with Background -->
 <section id="hero" class="relative h-screen bg-[url('./images/hero-contact.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
   <!-- Dark Overlay -->
@@ -61,22 +89,12 @@
   <div class="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-3xl px-6">
     
 <!-- Logo (Left Side) -->
-<div class="flex-shrink-0 w-16 md:w-20 lg:w-24 h-auto">
-  <img src="./images/LLoydRecording.png" class="contact-logo object-contain" alt="LLoyd Recording Logo">
-</div>
+
 
 
 
     <!-- Contact Information (Right Side) -->
-    <div class="text-left md:text-left w-full md:w-2/3 text-white">
-      <h1 class="text-3xl md:text-5xl font-bold mb-3">Get in Touch</h1>
-      <p class="text-lg md:text-2xl mb-2">Have a project in mind?</p>
-      <p class="text-base md:text-lg">Reach out and let's make it happen.</p>
-      <div class="mt-4">
-        <p class="text-sm md:text-base font-medium">Email: <a href="mailto:contact@lloydrecording.com" class="text-blue-400 hover:underline">prodrichardlloyd@gmail.com</a></p>
-        <p class="text-sm md:text-base font-medium">Instagram DM: <a href="tel:+1234567890" class="text-blue-400 hover:underline">@richardvxa</a></p>
-      </div>
-    </div>
+
 
   </div>
 </section>
