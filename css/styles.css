@@ -39,6 +39,10 @@
   margin-left: 1rem;
 }
 
+#hero.home-page p {
+  margin: 0;
+}
+
 /* Restrict the Logo Size */
 .contact-logo {
   max-width: 500px; /* Adjust as needed */
@@ -55,12 +59,16 @@
   max-height: 80vh;
 }
 
+#hero .home-heading-text {
+  margin: auto;
+}
+
+#lightbox {
+  background: #00000080;
+}
+
 @media screen and (min-width: 768px) {
   .card-text-left {
     text-align: left;
-  }
-
-  #lightbox {
-    max-width: 80%;
   }
 }
