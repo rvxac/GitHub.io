@@ -2,7 +2,7 @@
 
 /* --- Hero Section (Parallax) --- */
 #hero {
-  background-image: url('../images/hero-background.jpg');
+  background-image: url("../images/hero-background.jpg");
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -13,16 +13,17 @@
   text-align: center;
   color: white;
   position: relative;
+  padding-top: 1rem;
 }
 
 /* Contact Page Hero Background */
 .contact-page #hero {
-  background-image: url('../images/hero-contact.jpg'); /* Unique background for Contact Page */
+  background-image: url("../images/hero-contact.jpg"); /* Unique background for Contact Page */
 }
 
 /* Hero Title Styling */
 #hero h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 4.5rem;
   font-weight: 700;
   color: #fff;
@@ -30,8 +31,12 @@
   letter-spacing: 2px;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   max-width: 90%;
+}
+
+#hero p {
+  margin-left: 1rem;
 }
 
 /* Restrict the Logo Size */
@@ -40,9 +45,22 @@
   height: auto; /* Keep aspect ratio */
 }
 
-
 /* Constrain Album Covers */
 .album-cover {
   max-width: 400px; /* Adjust to desired size */
   height: auto;
+}
+
+#lightbox-img {
+  max-height: 80vh;
+}
+
+@media screen and (min-width: 768px) {
+  .card-text-left {
+    text-align: left;
+  }
+
+  #lightbox {
+    max-width: 80%;
+  }
 }
