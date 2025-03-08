@@ -57,6 +57,7 @@
 
 #lightbox-img {
   max-height: 80vh;
+  object-fit: contain;
 }
 
 #hero .home-heading-text {
@@ -67,8 +68,14 @@
   background: #00000080;
 }
 
+#prev,
+#next {
+  z-index: 9999;
+}
+
 .lightbox-image-container {
-  width: fit-content;
+  width: 100%;
+  max-width: 768px;
 }
 
 @media screen and (min-width: 768px) {
