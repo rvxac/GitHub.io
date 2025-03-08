@@ -67,6 +67,10 @@
   background: #00000080;
 }
 
+.lightbox-image-container {
+  width: fit-content;
+}
+
 @media screen and (min-width: 768px) {
   .card-text-left {
     text-align: left;
